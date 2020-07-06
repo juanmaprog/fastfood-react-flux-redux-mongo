@@ -1,0 +1,10 @@
+Instalar npx dentro de nuestro sistema.
+Ejecución de código basado en npm.
+    npm install -g npx
+
+Paquete para crear nuevas aplicaciones de react
+de manera automática.
+    npm install -g create-react-app
+
+Crear la aplicación.
+    npx create-react-app fastfood-react-flux-redux-mongo
