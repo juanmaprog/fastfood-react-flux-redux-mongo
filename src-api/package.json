@@ -1,0 +1,36 @@
+{
+  "name": "rental-movies",
+  "version": "2.0.0",
+  "description": "* Modify the .env file with the desired connection.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "dev": "node --port 3003 src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.1",
+    "jwt-simple": "^0.5.6",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.19",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "handlebars": "^4.7.6",
+    "nodemon": "^2.0.4",
+    "npm-check-updates": "^4.1.2"
+  }
+}
