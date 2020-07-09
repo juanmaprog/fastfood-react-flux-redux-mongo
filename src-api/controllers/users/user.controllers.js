@@ -10,15 +10,15 @@ usersCtrl.allUsers = async (req, res) => {//funcion para traerme a todos los usu
   res.json(users);//en objetos json
   
 };
-usersCtrl.allUsersActives = async (req, res) => {
-  const users = await User.find()
-    .where({ active: true })
+usersCtrl.allUsersActives = async (req, res) => {//función para todos los usuarios activos
+  const users = await User.find()//espero que me encuentres a todos los usuarios
+    .where({ active: true })//donde el usuario este activo
     .sort({ firstName: "asc" });//ordenamelo por el primer nombre de manera ascendente de los usuarios activos
   res.json(users);//retornamos todos los documentos de los usuarios
 };
-usersCtrl.allUsersInactives = async (req, res) => {
-  const users = await User.find()
-    .where({ active: false })
+usersCtrl.allUsersInactives = async (req, res) => {//funcion todos los usuarios inactivos 
+  const users = await User.find()//espero que me encuentres a todos los usuarios
+    .where({ active: false })//donde el usuario no este activo
     .sort({ firstName: "asc" });//ordenamelo por el primer nombre de manera ascendente de los usuarios inactivos
   res.json(users);//retornamos todos los documentos de los usuarios
 };
