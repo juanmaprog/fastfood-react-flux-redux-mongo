@@ -1,7 +1,6 @@
 const { Schema, model } = require("mongoose"); //importamos moogose para gestionar la base de datos
 const bcrypt = require("bcryptjs"); //requerimos libreria bcryptjs para la encriptación de contraseñas
 
-<<<<<<< HEAD
 const UserSchema = new Schema({
   //creamos la constante userschema para guardar los datos internos como plantilla para crear usuarios
   //los datos a continuacion son un molde para generar la informacion de cada usuario.
@@ -20,24 +19,6 @@ const UserSchema = new Schema({
   deleted: { type: Boolean, default: false }, //borrado usuario lo ponemos en false para que cada usuario introducido no este borrado
   documents: [{ type: Schema.Types.DocumentId, ref: "Document" }], //nos traemos las facturas del usuario.
 });
-=======
-const UserSchema = new Schema({//creamos la constante userschema para guardar los datos internos como plantilla para crear usuarios
-    //los datos a continuacion son un molde para generar la informacion de cada usuario.
-  _id: String,//forzamos el id para que mongo no lo coja automaticamente
-  name: { type: String, required: true },//registramos el nombre en tipo string siendo obligatorio
-  email: { type: String, unique: true, required: true },//registramos email y obligamos que sea obligatorio y que sea unico en la base de datos
-  password: { type: String, required: true, select: false },//forzamos a que el password no se traiga on el resto de la informacion con el parametro select
-  token: { type:String, unique:true },
-  addresses: [{ type: String }],//es un array porque puden haber varias direccion por el mismo usuario
-  phones: [{type: String}],//es un array porque el usuario puede tener varios telefonos
-  newlaters: {type: Boolean},//suscripcion al noticiero de la web
-  billcard: [{type: String}],//array porque se pueden tener varias tarjetas y string porque tambien tiene letras
-  createdBy: String,//forzamos para saber quien a creado el dato de documento
-  createdAt: { type: Date, default: new Date() },//introducimos la fecha en la que se ha creado y aunque no se ponga la fecha se introduce automaticamente por la funcion default
-  active: { type: Boolean, default: true },//el usuario esta activo por defecto asi sera
-  deleted: { type: Boolean, default: false },//borrado usuario lo ponemos en false para que cada usuario introducido no este borrado
-})
->>>>>>> 2e5a176f2b2bbd20d54dc43d6f80eccbcaf253e0
 
 //Funcion para encriptar la contrseña de usuario
 UserSchema.pre("save", function () {
