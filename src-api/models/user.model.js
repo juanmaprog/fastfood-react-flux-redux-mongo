@@ -16,7 +16,7 @@ const UserSchema = new Schema({//creamos la constante userschema para guardar lo
   createdAt: { type: Date, default: new Date() },//introducimos la fecha en la que se ha creado y aunque no se ponga la fecha se introduce automaticamente por la funcion default
   active: { type: Boolean, default: true },//el usuario esta activo por defecto asi sera
   deleted: { type: Boolean, default: false },//borrado usuario lo ponemos en false para que cada usuario introducido no este borrado
-});
+})
 
 //funcion para encriptar la contrseña de usuario
 UserSchema.pre("save", function () {//antes de guardar el modelo de usuario generamos la siguiente funcion
