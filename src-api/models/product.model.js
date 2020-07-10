@@ -7,6 +7,8 @@ const ProductSchema = new Schema({
   quantityStock: { type: Number },
   ingredients: [{ type: Schema.Types.ObjectId, ref: "Ingredient" }],
   price: { type: Number },
+  cost: { type: Number },
+  minimumStock: { type: Number },
   createdAt: { type: Date, default: new Date() }, //nos trae la fecha del momento del registro.
 });
 
