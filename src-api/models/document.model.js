@@ -5,7 +5,7 @@ const DocumentSchema = new Schema({
   //los datos a continuacion son un molde para generar la informacion de cada documento de pedido.
   createdAt: { type: Date, default: new Date() }, //introducimos la fecha en la que se ha creado y aunque no se ponga la fecha se introduce automaticamente por la funcion default
   user: { type: Schema.Types.ObjectId, ref: "User" }, //con esta sentencia referenciamos al modelo del usuario y al no ser un array decimos que es una relacion de a uno
-  paymentMethod: { type: String },
+  paymentMethod: { type: String },//forma de pago del documento en cuestion.
   documentDetails: [{ type: Schema.Types.ObjectId, ref: "DocumentDetail" }], //con esta sentencia referenciamos a los detalles del documento y al ser un array le decimos que es una relación de a muchos
   addresses: [{ type: String }], //es un array porque puden haber varias direccion por el mismo usuario
   phones: [{ type: String }], //es un array porque el usuario puede tener varios telefonos
