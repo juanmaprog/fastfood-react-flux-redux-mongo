@@ -8,7 +8,7 @@ const UserSchema = new Schema({//creamos la constante userschema para guardar lo
   name: { type: String, required: true }, //registramos el nombre en tipo string siendo obligatorio
   email: { type: String, unique: true, required: true }, //registramos email y obligamos que sea obligatorio y que sea unico en la base de datos
   password: { type: String, required: true, select: false }, //forzamos a que el password no se traiga on el resto de la informacion con el parametro select
-  token: { type: String, unique: true },
+  token: { type: String, unique: true },//token de usuario para permitir su acceso a la aplicacion
   addresses: [{ type: String }], //es un array porque puden haber varias direccion por el mismo usuario
   phones: [{ type: String }], //es un array porque el usuario puede tener varios telefonos
   newlaters: { type: Boolean }, //suscripcion al noticiero de la web
