@@ -5,6 +5,7 @@ const IngredSchema = new Schema({
     name: {type: String, required: true},
     weight: {type: Number},//unidad de medida gramos.
     energyvalue: {type: Number},//unidad medida kcal.
+
     //Unidad de medida gramos.
     proteins: {type: Number},
     carbohydrates: {type: Number},
@@ -18,6 +19,7 @@ const IngredSchema = new Schema({
     Naturaltransfat: {type: Number},
     Transfat: {type: Number},
     Fiber: {type: Number},
+    
     //Unidad de medida miligramos.
     Sodium: {type: Number},
     Salt: {type: Number},
