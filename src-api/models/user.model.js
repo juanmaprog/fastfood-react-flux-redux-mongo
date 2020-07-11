@@ -1,8 +1,8 @@
 const { Schema, model } = require("mongoose"); //importamos moogose para gestionar la base de datos
 const bcrypt = require("bcryptjs"); //requerimos libreria bcryptjs para la encriptación de contraseñas
 
-const UserSchema = new Schema({
-  //creamos la constante userschema para guardar los datos internos como plantilla para crear usuarios
+const UserSchema = new Schema({//creamos la constante userschema para guardar los datos internos como plantilla para crear usuarios
+  
   //los datos a continuacion son un molde para generar la informacion de cada usuario.
   _id: String, //forzamos el id para que mongo no lo coja automaticamente
   name: { type: String, required: true }, //registramos el nombre en tipo string siendo obligatorio
