@@ -1,7 +1,7 @@
 
 
 
-const nombre   = 'Fernando';
+const nombre   = 'Juan';
 const apellido = 'Herrera';
 
 

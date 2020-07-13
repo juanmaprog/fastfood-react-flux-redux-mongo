@@ -14,7 +14,7 @@ const saludar4 = () => `Hola Mundo`;
 // console.log( saludar('Goku') )
 
 console.log( saludar2('Vegeta') );
-console.log( saludar3('Goku') );
+console.log( saludar3('Uno') );
 console.log( saludar4() );
 
 
@@ -33,7 +33,7 @@ const getUsuarioActivo = ( nombre ) =>({
     username: nombre
 })
 
-const usuarioActivo = getUsuarioActivo('Fernando');
+const usuarioActivo = getUsuarioActivo('Juan');
 console.log( usuarioActivo );
 
 
