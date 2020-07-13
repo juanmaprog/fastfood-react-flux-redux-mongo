@@ -6,7 +6,6 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
 const morgan = require("morgan");
-<<<<<<< HEAD
 const bodyParser = require('body-parser');
 // Initializations
 const app = express();
@@ -26,31 +25,6 @@ app.engine(
   })
 );
 app.set("view engine", ".hbs");
-=======
-const bodyParser = require("body-parser");
-
-// Initializations
-const app = express();
-require("./config/passport");
-
-// Initialize sample data
-// require("./initialData/appServerInit");
-
-// settings
-app.set("port", process.env.PORT || 3004);
-// app.set("views", path.join(__dirname, "views"));
-// app.engine(
-//   ".hbs",
-//   exphbs({
-//     defaultLayout: "main",
-//     layoutsDir: path.join(app.get("views"), "layouts"),
-//     partialsDir: path.join(app.get("views"), "partials"),
-//     extname: ".hbs",
-//   })
-// );
-// app.set("view engine", ".hbs");
-
->>>>>>> 6131d9fcbc09f31777ab2fa8840d077f3c63ab3d
 // middlewares
 app.use(express.urlencoded({ extended: false }));
 // app.use(bodyParser.urlencoded({urlencoded:false}));
@@ -68,10 +42,6 @@ app.use(passport.session());
 app.use(flash());
 app.use(morgan("dev"));
 app.use(express.json());
-<<<<<<< HEAD
-=======
-
->>>>>>> 6131d9fcbc09f31777ab2fa8840d077f3c63ab3d
 // Global Variables
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
@@ -80,7 +50,6 @@ app.use((req, res, next) => {
   res.locals.user = req.user || null;
   next();
 });
-<<<<<<< HEAD
 // routes
 app.use(require("./routes/index.routes"));
 app.use(require("./routes/users.routes"));
@@ -92,19 +61,3 @@ app.use(require("./routes/companies.routes"));
 // static files
 app.use(express.static(path.join(__dirname, "public")));
 module.exports = app;
-=======
-
-// routes
-// app.use(require("./routes/index.routes"));
-// app.use(require("./routes/users.routes"));
-// app.use(require("./routes/rentals.routes"));
-// app.use(require("./routes/customers.routes"));
-// app.use(require("./routes/movies.routes"));
-// app.use(require("./routes/artists.routes"));
-// app.use(require("./routes/companies.routes"));
-
-// static files
-// app.use(express.static(path.join(__dirname, "public")));
-
-module.exports = app;
->>>>>>> 6131d9fcbc09f31777ab2fa8840d077f3c63ab3d
