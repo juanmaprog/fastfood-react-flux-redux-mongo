@@ -8,3 +8,4 @@ de manera automática.
 
 Crear la aplicación.
     npx create-react-app fastfood-react-flux-redux-mongo
+
