@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require("mongoose");//requerimos moongose
 
 const IngredSchema = new Schema({
     _id: String,
