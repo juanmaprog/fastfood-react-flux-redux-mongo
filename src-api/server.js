@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 });
 // routes
 //  app.use(require("./routes/index.routes"));
-app.use(require("./routes/user.routes"));
+// app.use(require("./routes/user.routes"));
 /*app.use(require("./routes/rentals.routes"));
 app.use(require("./routes/customers.routes"));
 app.use(require("./routes/movies.routes"));

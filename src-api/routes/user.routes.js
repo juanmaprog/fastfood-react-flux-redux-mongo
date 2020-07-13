@@ -4,12 +4,12 @@ const router = require ('express').Router();//activamos la funcion .Router de la
 
 //ENDPOINTS DE LA LOGICA DE USUARIOS.
 router.get('/allusers', usercontrollers.allUsers)//nos traemos a todos los usuarios mediante la logica declarada de allUsers.
-router.get('/allactive', usercontrollers.allUsersActives)//nos traemos a todos los usuarios mediante la logica declarada de allUsersActives.
+/* router.get('/allactive', usercontrollers.allUsersActives)//nos traemos a todos los usuarios mediante la logica declarada de allUsersActives.
 router.post('/allinactives', usercontrollers.allUsersInactives)//nos traemos a todos los usuarios mediante la logica declarada de allUsersInactives.
 router.delete('/alldeleteds', usercontrollers.allUsersDeleteds)//nos traemos a todos los usuarios mediante la logica declarada de allUserDeleteds.
 router.post('/userid', usercontrollers.userById)//nos traemos a todos los usuarios mediante la logica declarada de userById.
 router.post('/createuser', usercontrollers.createNewUser)//nos traemos a todos los usuarios mediante la logica declarada de createNewUsers.
 router.post('/updateuser', usercontrollers.updateUser)//nos traemos a todos los usuarios mediante la logica declarada de updateUser.
 router.delete('/deleteuser', usercontrollers.deleteUser)//nos traemos a todos los usuarios mediante la logica declarada de deleteUser.
-
+ */
 export default router;//exportamos el archivo user.router mediante la siguiente linea.
