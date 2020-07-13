@@ -51,9 +51,9 @@ app.use((req, res, next) => {
   next();
 });
 // routes
-/* app.use(require("./routes/index.routes"));
-app.use(require("./routes/users.routes"));
-app.use(require("./routes/rentals.routes"));
+//  app.use(require("./routes/index.routes"));
+app.use(require("./routes/user.routes"));
+/*app.use(require("./routes/rentals.routes"));
 app.use(require("./routes/customers.routes"));
 app.use(require("./routes/movies.routes"));
 app.use(require("./routes/artists.routes"));
