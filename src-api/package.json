@@ -4,7 +4,7 @@
   "description": "* Modify the .env file with the desired connection.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "nodemon index.js",
     "dev": "node --port 3003 src/index.js"
   },
   "keywords": [],
