@@ -1,20 +1,23 @@
-const express = require("express");
+//delega toda la responsabilidad del servidor a este archivo
+//importaciones
+const CartRouter = require('./routes/cart.routes');
+const express = require("express");//requerimos la libreria express
 const exphbs = require("express-handlebars");
-const path = require("path");
-const methodOverride = require("method-override");
-const session = require("express-session");
+const path = require("path");//Libreria de caminos internas del equipo de trabajo (Juan, Oscar, Josemi)
+const methodOverride = require("method-override");//
+const session = require("express-session");//
 const flash = require("connect-flash");
 const passport = require("passport");
 const morgan = require("morgan");
 const bodyParser = require('body-parser');
-// Initializations
+// inicializadores
 const app = express();
 require("./config/passport");
 // Initialize sample data
 // require("./initialData/appServerInit");
 // settings
 app.set("port", process.env.PORT || 3003);
-app.set("views", path.join(__dirname, "views"));
+/* app.set("views", path.join(__dirname, "views"));
 app.engine(
   ".hbs",
   exphbs({
@@ -24,7 +27,7 @@ app.engine(
     extname: ".hbs",
   })
 );
-app.set("view engine", ".hbs");
+app.set("view engine", ".hbs"); */
 // middlewares
 app.use(express.urlencoded({ extended: false }));
 // app.use(bodyParser.urlencoded({urlencoded:false}));
@@ -51,6 +54,15 @@ app.use((req, res, next) => {
   next();
 });
 // routes
+app.get('/', function(req, res) {
+  res.send('hello world');
+});
+
+app.use('/carts', CartRouter);
+app.use('/cart', CartRouter);
+/* app.use('/products', ProductRouter);
+app.use('/documents', CartRouter); */
+// app.use(require("./routes/cart.routes"));
 //  app.use(require("./routes/index.routes"));
 // app.use(require("./routes/user.routes"));
 /*app.use(require("./routes/rentals.routes"));
