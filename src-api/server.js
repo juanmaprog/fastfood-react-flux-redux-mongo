@@ -1,17 +1,8 @@
 //delega toda la responsabilidad del servidor a este archivo
-<<<<<<< HEAD
-//============= IMPORTACIONES ===============
-const CartRouter = require('./routes/cart.routes');
-//============OSCAR==============//
-const FamilyRouter = require('./routes/family.routes');
-const IngredientsRouter = require('./routes/ingredients.routes');
-
-=======
 
 //============= IMPORTACIONES ===============
 const CartRouter = require('./routes/cart.routes');
 const ProductRouter = require('./routes/product.routes');
->>>>>>> 167b70a063e52c31ca889339ee4f3bcc964da8ae
 const express = require("express");//requerimos la libreria express
 const exphbs = require("express-handlebars");
 const path = require("path");//Libreria de caminos internas del equipo de trabajo (Juan, Oscar, Josemi)
@@ -21,10 +12,6 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const morgan = require("morgan");
 const bodyParser = require('body-parser');
-<<<<<<< HEAD
-=======
-
->>>>>>> 167b70a063e52c31ca889339ee4f3bcc964da8ae
 //============= INICIALIZADORES ===============
 const app = express();
 require("./config/passport");
