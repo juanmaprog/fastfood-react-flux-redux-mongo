@@ -1,20 +1,27 @@
-const express = require("express");
+//delega toda la responsabilidad del servidor a este archivo
+//============= IMPORTACIONES ===============
+const CartRouter = require('./routes/cart.routes');
+//============OSCAR==============//
+const FamilyRouter = require('./routes/family.routes');
+const IngredientsRouter = require('./routes/ingredients.routes');
+
+const express = require("express");//requerimos la libreria express
 const exphbs = require("express-handlebars");
-const path = require("path");
-const methodOverride = require("method-override");
-const session = require("express-session");
+const path = require("path");//Libreria de caminos internas del equipo de trabajo (Juan, Oscar, Josemi)
+const methodOverride = require("method-override");//
+const session = require("express-session");//
 const flash = require("connect-flash");
 const passport = require("passport");
 const morgan = require("morgan");
 const bodyParser = require('body-parser');
-// Initializations
+//============= INICIALIZADORES ===============
 const app = express();
 require("./config/passport");
 // Initialize sample data
 // require("./initialData/appServerInit");
 // settings
 app.set("port", process.env.PORT || 3003);
-app.set("views", path.join(__dirname, "views"));
+/* app.set("views", path.join(__dirname, "views"));
 app.engine(
   ".hbs",
   exphbs({
@@ -24,7 +31,7 @@ app.engine(
     extname: ".hbs",
   })
 );
-app.set("view engine", ".hbs");
+app.set("view engine", ".hbs"); */
 // middlewares
 app.use(express.urlencoded({ extended: false }));
 // app.use(bodyParser.urlencoded({urlencoded:false}));
@@ -50,7 +57,19 @@ app.use((req, res, next) => {
   res.locals.user = req.user || null;
   next();
 });
-// routes
+//============= ROUTES ===============
+  //cart routes
+app.use('/carts', CartRouter);
+app.use('/cart', CartRouter);
+  //family routes
+app.use('/family', FamilyRouter);
+  //product routes
+app.use('/products', ProductRouter);
+  //ingredinets routes
+app.use('/ingredients',IngredientsRouter);
+/* app.use('/products', ProductRouter);
+app.use('/documents', CartRouter); */
+// app.use(require("./routes/cart.routes"));
 //  app.use(require("./routes/index.routes"));
 // app.use(require("./routes/user.routes"));
 /*app.use(require("./routes/rentals.routes"));
@@ -60,4 +79,4 @@ app.use(require("./routes/artists.routes"));
 app.use(require("./routes/companies.routes")); */
 // static files
 app.use(express.static(path.join(__dirname, "public")));
-module.exports = app;
+module.exports =  app;

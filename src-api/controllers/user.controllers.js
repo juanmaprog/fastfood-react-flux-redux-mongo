@@ -1,7 +1,7 @@
-const getNewGUID = require("../../helpers/helperString"); //importamos la función getNewGUID del archivo helpersString para poder usarlo en este documento y que a su vez sea mas limpio
+const getNewGUID = require("../helpers/helperString"); //importamos la función getNewGUID del archivo helpersString para poder usarlo en este documento y que a su vez sea mas limpio
 const usersCtrl = {}; //
 // Models
-const User = require("../../models/user.model");
+const User = require("../models/user.model");
 //========= ALL USERS =========
 usersCtrl.allUsers = async (req, res) => {
   //funcion para traerme a todos los usuarios
