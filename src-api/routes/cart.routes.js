@@ -4,19 +4,19 @@ const router = require ('express').Router();
 
 //ENDPOINTS DE LA LOGICA DE EL CARRITO.
 //localhost:3000/carts
-//========== GET ALL CARTS ==========
+    //========== GET ALL CARTS ==========
 router.get('/' , cartcontrollers.allCarts);
 
-//========== GET CART FROM USER ==========
-router.get('/:idUser' , cartcontrollers.userCart);
+    //========== GET CART FROM USER ==========
+//router.get('/:idUser' , cartcontrollers.userCart);
 
-//=========== DELETE ===========
+    //=========== DELETE ===========
+//router.get('/delete' , cartcontrollers.deleteCart);
+
+    //=========== CART TO DOCUMENT AND DELETED CART ============
 
 
-//=========== CART TO DOCUMENT AND DELETED CART ============
-
-
-//========== SAVE CART =========
+    //========== SAVE CART =========
 
 
 
