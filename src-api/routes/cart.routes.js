@@ -8,7 +8,13 @@ const router = require ('express').Router();
 router.get('/' , cartcontrollers.allCarts);
 
     //========== GET CART FROM USER ==========
-//router.get('/:idUser' , cartcontrollers.userCart);
+router.get('/:idUser' , cartcontrollers.userCart);
+
+    //===========POST===========//
+router.post('/newCart', cartcontrollers.createdCart);
+
+    //============UPDATE==============//
+//router.put('/:idCart', cartcontrollers.updateCart);
 
     //=========== DELETE ===========
 //router.get('/delete' , cartcontrollers.deleteCart);

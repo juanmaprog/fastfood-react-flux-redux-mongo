@@ -16,10 +16,27 @@ cartsCtrl.allCarts = async (req,  res) => {//funcion usada para traenos todos lo
 
 //========= USE CART =========
 cartsCtrl.userCart = async (req,  res) => {//función para el carro que esta usando el usuario en ese momento
+    const idUser = (req.params.idUser);
+    //res.json(idUser);
     const cart= await Cart.find()
-    .where({ user: req.params.idUser })//donde usuario sea igual al id de usuario que me han pasado por el carrito
+    .populate("user")//indicamos que vaya a user con la funcion populate.
+    .where({ _id: idUser })//donde usuario sea igual al id de usuario que me han pasado por el carrito
     res.json(cart);
 };
+
+//=================POST==============//
+cartsCtrl.createdCart = async (req, res) => {
+    const newCart = new Cart(req.body);
+    newCart._id = getNewGUID();
+    await newCart.save();//el await indica que hasta que no se guarde el nuevo carro no pasamos a la linea siguiente. Indicamos que toda la informacion de newCart la guarde en la db.
+    res.json(newCart);
+}
+
+//============UPDATE=============//
+cartsCtrl.updateCart = async (req, res) => {
+    const updateCart = new Cart(req.body);
+    
+}
 
 //========= DELETE CART =========
 cartsCtrl.deleteCart = async (req,  res) => {//función para el carro que esta usando el usuario en ese momento
@@ -27,8 +44,6 @@ cartsCtrl.deleteCart = async (req,  res) => {//función para el carro que esta u
     .where({ user: req.params.idUser })//donde usuario sea igual al id de usuario que me han pasado por el carrito
     res.json(cart);
 };
-
-
 
 //EXPORTACION
 module.exports = cartsCtrl;//exportamos la lógica de carrito
