@@ -55,19 +55,6 @@ app.use((req, res, next) => {
   res.locals.user = req.user || null;
   next();
 });
-<<<<<<< HEAD
-//============= ROUTES ===============
-  //cart routes
-app.use('/carts', CartRouter);
-app.use('/cart', CartRouter);
-  //family routes
-app.use('/family', FamilyRouter);
-  //product routes
-app.use('/products', ProductRouter);
-  //ingredinets routes
-app.use('/ingredients',IngredientsRouter);
-=======
-
 
 //============= ROUTES ===============
 
@@ -81,7 +68,6 @@ app.use('/products', ProductRouter);
 
 
 
->>>>>>> 167b70a063e52c31ca889339ee4f3bcc964da8ae
 /* app.use('/products', ProductRouter);
 app.use('/documents', CartRouter); */
 // app.use(require("./routes/cart.routes"));
