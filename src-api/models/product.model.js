@@ -12,4 +12,4 @@ const ProductSchema = new Schema({//creamos la constante productschema para guar
   createdAt: { type: Date, default: new Date() }, //nos trae la fecha del momento del registro.
 });
 
-module.exports = model("Cart", ProductSchema); //exportamos el modelo de carrito
+module.exports = model("Product", ProductSchema); //exportamos el modelo de carrito

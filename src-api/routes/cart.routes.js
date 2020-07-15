@@ -1,7 +1,26 @@
-//import { router } from 'express';
-const cartcontrollers = require('../helpers/helperString');
+// import { router } from 'express';
+const cartcontrollers = require('../controllers/cart/cart.controllers');
 const router = require ('express').Router();
 
-router.get('/carts', cartcontrollers.allCarts);
+//ENDPOINTS DE LA LOGICA DE EL CARRITO.
+//localhost:3000/carts
+    //========== GET ALL CARTS ==========
+router.get('/' , cartcontrollers.allCarts);
 
-export default router;
+    //========== GET CART FROM USER ==========
+//router.get('/:idUser' , cartcontrollers.userCart);
+
+    //=========== DELETE ===========
+//router.get('/delete' , cartcontrollers.deleteCart);
+
+    //=========== CART TO DOCUMENT AND DELETED CART ============
+
+
+    //========== SAVE CART =========
+
+
+
+
+
+
+module.exports = router;//exportamos el archivo user.router mediante la siguiente linea.
