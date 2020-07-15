@@ -1,6 +1,8 @@
 //delega toda la responsabilidad del servidor a este archivo
-//importaciones
+
+//============= IMPORTACIONES ===============
 const CartRouter = require('./routes/cart.routes');
+const ProductRouter = require('./routes/product.routes');
 const express = require("express");//requerimos la libreria express
 const exphbs = require("express-handlebars");
 const path = require("path");//Libreria de caminos internas del equipo de trabajo (Juan, Oscar, Josemi)
@@ -10,7 +12,8 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const morgan = require("morgan");
 const bodyParser = require('body-parser');
-// inicializadores
+
+//============= INICIALIZADORES ===============
 const app = express();
 require("./config/passport");
 // Initialize sample data
@@ -53,13 +56,20 @@ app.use((req, res, next) => {
   res.locals.user = req.user || null;
   next();
 });
-// routes
-app.get('/', function(req, res) {
-  res.send('hello world');
-});
 
+
+//============= ROUTES ===============
+
+  //cart routes
 app.use('/carts', CartRouter);
-app.use('/cart', CartRouter);
+// app.use('/cart', CartRouter); 
+
+  //product routes
+app.use('/products', ProductRouter);
+
+
+
+
 /* app.use('/products', ProductRouter);
 app.use('/documents', CartRouter); */
 // app.use(require("./routes/cart.routes"));
