@@ -5,6 +5,7 @@ const cartsCtrl = {};
 //MODELOS
 const Cart = require('../models/cart.model');//guardamos en la variable Cart el contenido del modelo de carrito
 
+
 //LOGICA
 
 //========= ALL CARTS =========
@@ -31,18 +32,18 @@ cartsCtrl.createdCart = async (req, res) => {
     res.json(newCart);
 }
 
-//============UPDATE=============//
-cartsCtrl.updateCart = async (req, res) => {
-    const idCart = (req.params.idCart);
-    const updateCart = (req.body);
-    const cart = await Cart.findByIdAndUpdate(idCart, updateCart);
+//============UPDATE CART=============//
+cartsCtrl.updateCart = async (req, res) => {//funcion para actualizar el carrito de compra por si se quiere añadir mas cantidad de un producto en concreto
+    const idCart = (req.params.idCart);//capturamos el id del carrito en uso
+    const updateCart = (req.body);//cojemos del body los datos actualizados
+    const cart = await Cart.findByIdAndUpdate(idCart, updateCart);//actualizamos el carrito
 }
 
-//========= DELETE CART =========
-cartsCtrl.deleteCart = async (req,  res) => {//función para el carro que esta usando el usuario en ese momento
-    const cart= await Cart.find()
-    .where({ user: req.params.idUser })//donde usuario sea igual al id de usuario que me han pasado por el carrito
-    res.json(cart);
+//=========DELETE CART=========
+cartsCtrl.deleteCart = async (req,  res) => {//funcion para borrar carrito
+    const idCart = (req.params.idCart);//capturamos el id del carrito que queremos borrar
+    await Cart.findByIdAndDelete(idCart);//encontramos el id del carrito y lo borramos
+    res.json("delete cart is completed");//mensaje para el usuario
 };
 
 //EXPORTACION

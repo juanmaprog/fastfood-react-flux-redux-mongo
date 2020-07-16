@@ -59,9 +59,9 @@ app.use((req, res, next) => {
 //============= ROUTES ===============
 
   //cart routes
-app.use('/carts', CartRouter);
-app.use('/cart', CartRouter);
-//app.use('/cart1', CartRouter);
+app.use('/carts', CartRouter);//ruta para las funcionalidades logicas de varios carritos
+app.use('/cart', CartRouter);//ruta para la funcionalidad logica de un carrito
+
 
   //product routes
 //app.use('/products', ProductRouter);

@@ -14,9 +14,8 @@ router.post('/newCart', cartcontrollers.createdCart);
 router.put('/updateCart/:idCart', cartcontrollers.updateCart);
 
 //=========== DELETE ===========	    
+router.delete('/deleteCart/:idCart' , cartcontrollers.deleteCart)//endpoint de la ruta de borrado de carrito
 
-//=========== DELETE ===========
-//router.get('/delete' , cartcontrollers.deleteCart);	//router.get('/delete' , cartcontrollers.deleteCart);
 
 
 
