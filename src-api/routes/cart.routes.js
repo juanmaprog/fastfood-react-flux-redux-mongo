@@ -1,22 +1,22 @@
 // import { router } from 'express';
-const cartcontrollers = require('../controllers/cart/cart.controllers');
+const cartcontrollers = require('../controllers/cart.controllers');
 const router = require ('express').Router();
 
 //ENDPOINTS DE LA LOGICA DE EL CARRITO.
 //localhost:3000/carts
-    //========== GET ALL CARTS ==========
-router.get('/' , cartcontrollers.allCarts);
-
     //========== GET CART FROM USER ==========
 router.get('/:idUser' , cartcontrollers.userCart);
 
-    //=========== DELETE ===========
-//router.get('/delete' , cartcontrollers.deleteCart);
+    //===========POST===========//
+router.post('/newCart', cartcontrollers.createdCart);
 
-    //=========== CART TO DOCUMENT AND DELETED CART ============
+//============UPDATE==============//
+//router.put('/:idCart', cartcontrollers.updateCart);
 
+//=========== DELETE ===========	    
 
-    //========== SAVE CART =========
+//=========== DELETE ===========
+//router.get('/delete' , cartcontrollers.deleteCart);	//router.get('/delete' , cartcontrollers.deleteCart);
 
 
 

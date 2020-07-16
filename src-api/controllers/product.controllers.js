@@ -1,9 +1,9 @@
-const getNewGUID = require("../../helpers/helperString");
+const getNewGUID = require("../helpers/helperString");
 
 const productsCtrl = {};
 
 //MODELOS
-const Product = require('../../models/product.model');
+const Product = require('../models/product.model');
 
 //LOGICA
 

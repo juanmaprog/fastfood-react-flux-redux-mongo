@@ -1,9 +1,9 @@
-const getNewGUID = require("../../helpers/helperString");//guardamos en la variable getNewGUID el contenido del archivo helperString
+const getNewGUID = require("../helpers/helperString");//guardamos en la variable getNewGUID el contenido del archivo helperString
 
 const cartsCtrl = {};
 
 //MODELOS
-const Cart = require('../../models/cart.model');//guardamos en la variable Cart el contenido del modelo de carrito
+const Cart = require('../models/cart.model');//guardamos en la variable Cart el contenido del modelo de carrito
 
 //LOGICA
 
