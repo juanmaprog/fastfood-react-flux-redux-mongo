@@ -13,8 +13,7 @@ cartsCtrl.allCarts = async (req,  res) => {//funcion usada para traenos todos lo
     res.json(carts);
 };
 
-
-//========= USE CART =========
+//============USE CART============//
 cartsCtrl.userCart = async (req,  res) => {//función para el carro que esta usando el usuario en ese momento
     const idUser = (req.params.idUser);
     //res.json(idUser);
@@ -24,7 +23,7 @@ cartsCtrl.userCart = async (req,  res) => {//función para el carro que esta usa
     res.json(cart);
 };
 
-//=================POST==============//
+//===============POST==============//
 cartsCtrl.createdCart = async (req, res) => {
     const newCart = new Cart(req.body);
     newCart._id = getNewGUID();
@@ -34,8 +33,9 @@ cartsCtrl.createdCart = async (req, res) => {
 
 //============UPDATE=============//
 cartsCtrl.updateCart = async (req, res) => {
-    const updateCart = new Cart(req.body);
-    
+    const idCart = (req.params.idCart);
+    const updateCart = (req.body);
+    const cart = await Cart.findByIdAndUpdate(idCart, updateCart);
 }
 
 //========= DELETE CART =========

@@ -4,14 +4,14 @@ const router = require ('express').Router();
 
 //ENDPOINTS DE LA LOGICA DE EL CARRITO.
 //localhost:3000/carts
-    //========== GET CART FROM USER ==========
+//========== GET CART FROM USER ==========
 router.get('/:idUser' , cartcontrollers.userCart);
 
-    //===========POST===========//
+//===========POST===========//
 router.post('/newCart', cartcontrollers.createdCart);
 
 //============UPDATE==============//
-//router.put('/:idCart', cartcontrollers.updateCart);
+router.put('/updateCart/:idCart', cartcontrollers.updateCart);
 
 //=========== DELETE ===========	    
 
