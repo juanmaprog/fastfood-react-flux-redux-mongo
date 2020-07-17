@@ -12,7 +12,7 @@ test("get getNewGUID() to equal  defined", () => {
   expect(getNewGUID()).toBeDefined();
 });
 
-test("get getNewGUID().length to equal length 13 ", () => {
+test("get getNewGUID().length to equal length 36 ", () => {
   const oid = getNewGUID();
   const len = oid.length;
   expect(len).toBe(36);
