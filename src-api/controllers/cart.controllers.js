@@ -8,13 +8,13 @@ const Cart = require('../models/cart.model');//guardamos en la variable Cart el 
 
 //LOGICA
 
-//========= ALL CARTS =========
+//======ALL CARTS======//
 cartsCtrl.allCarts = async (req,  res) => {//funcion usada para traenos todos los carritos de compra
     const carts = await Cart.find()
     res.json(carts);
 };
 
-//============USE CART============//
+//======USE CART======//
 cartsCtrl.userCart = async (req,  res) => {//función para el carro que esta usando el usuario en ese momento
     const idUser = (req.params.idUser);
     //res.json(idUser);
@@ -24,7 +24,7 @@ cartsCtrl.userCart = async (req,  res) => {//función para el carro que esta usa
     res.json(cart);
 };
 
-//===============POST==============//
+//======POST======//
 cartsCtrl.createdCart = async (req, res) => {
     const newCart = new Cart(req.body);
     newCart._id = getNewGUID();
@@ -46,5 +46,5 @@ cartsCtrl.deleteCart = async (req,  res) => {//funcion para borrar carrito
     res.json("delete cart is completed");//mensaje para el usuario
 };
 
-//EXPORTACION
+//======EXPORTACION======//
 module.exports = cartsCtrl;//exportamos la lógica de carrito
