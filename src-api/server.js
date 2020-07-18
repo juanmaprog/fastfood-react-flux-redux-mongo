@@ -64,7 +64,8 @@ app.use('/cart', CartRouter);//ruta para la funcionalidad logica de un carrito
 
 
   //product routes
-//app.use('/products', ProductRouter);
+app.use('/products', ProductRouter);
+app.use('/product', ProductRouter);
 
 
 
