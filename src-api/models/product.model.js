@@ -10,6 +10,8 @@ const ProductSchema = new Schema({//creamos la constante productschema para guar
   cost: { type: Number },//coste del producto para la empresa
   minimumStock: { type: Number },//stock minimo que podemos tener para seguir funcionando correctamente
   createdAt: { type: Date, default: new Date() }, //nos trae la fecha del momento del registro.
+  actived: {type: Boolean, default: true},
+  deleted: {type:Boolean, default: false},
 });
 
 module.exports = model("Product", ProductSchema); //exportamos el modelo de carrito

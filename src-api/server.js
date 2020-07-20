@@ -2,6 +2,7 @@
 
 //======IMPORTACIONES======//
 const CartRouter = require('./routes/cart.routes');
+const FamilyRouter = require('./routes/family.routes');
 const ProductRouter = require('./routes/product.routes');
 const express = require("express");//requerimos la libreria express
 const exphbs = require("express-handlebars");
@@ -66,6 +67,9 @@ app.use('/cart', CartRouter);//ruta para la funcionalidad logica de un carrito
   //product routes
 //app.use('/products', ProductRouter);
 
+//======FAMILY======//
+app.use('/families', FamilyRouter);
+app.use('/family', FamilyRouter);
 
 
 
