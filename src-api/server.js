@@ -1,17 +1,18 @@
-//delega toda la responsabilidad del servidor a este archivo
-
 //======IMPORTACIONES======//
-const CartRouter = require('./routes/cart.routes');
-const ProductRouter = require('./routes/product.routes');
-const express = require("express");//requerimos la libreria express
+const express = require("express"); //requerimos la libreria express
 const exphbs = require("express-handlebars");
-const path = require("path");//Libreria de caminos internas del equipo de trabajo (Juan, Oscar, Josemi)
-const methodOverride = require("method-override");//
-const session = require("express-session");//
+const path = require("path"); //Libreria de caminos internas del equipo de trabajo (Juan, Oscar, Josemi)
+const methodOverride = require("method-override"); //
+const session = require("express-session"); //
 const flash = require("connect-flash");
 const passport = require("passport");
 const morgan = require("morgan");
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
+
+const CartRouter = require("./routes/cart.routes");
+const ProductRouter = require("./routes/product.routes");
+const DocumentRouter = require("./routes/document.routes");
+
 //======INICIALIZADORES======//
 const app = express();
 require("./config/passport");
@@ -58,28 +59,19 @@ app.use((req, res, next) => {
 
 //=======ROUTES======//
 
-  //cart routes
-app.use('/carts', CartRouter);//ruta para las funcionalidades logicas de varios carritos
-app.use('/cart', CartRouter);//ruta para la funcionalidad logica de un carrito
+//CART ROUTES
+app.use("/carts", CartRouter); //ruta para las funcionalidades logicas de varios carritos
+app.use("/cart", CartRouter); //ruta para la funcionalidad logica de un carrito
+
+//PRODUCT ROUTES
+app.use("/products", ProductRouter);
+app.use("/product", ProductRouter);
+
+//DOCUMENTS ROUTES
+app.use("/api/documents", DocumentRouter);
+app.use("/api/document", DocumentRouter);
 
 
-  //product routes
-app.use('/products', ProductRouter);
-app.use('/product', ProductRouter);
-
-
-
-
-/* app.use('/products', ProductRouter);
-app.use('/documents', CartRouter); */
-// app.use(require("./routes/cart.routes"));
-//  app.use(require("./routes/index.routes"));
-// app.use(require("./routes/user.routes"));
-/*app.use(require("./routes/rentals.routes"));
-app.use(require("./routes/customers.routes"));
-app.use(require("./routes/movies.routes"));
-app.use(require("./routes/artists.routes"));
-app.use(require("./routes/companies.routes")); */
-// static files
+//STATIC FILES
 app.use(express.static(path.join(__dirname, "public")));
-module.exports =  app;
+module.exports = app;
