@@ -20,7 +20,7 @@ cartsCtrl.userCart = async (req, res) => {
   res.json(cart);
 };
 
-//======POST======//
+//============POST CART=============//
 cartsCtrl.createdCart = async (req, res) => {
   const newCart = new Cart(req.body);
   newCart._id = getNewGUID();
@@ -36,7 +36,7 @@ cartsCtrl.updateCart = async (req, res) => {
   const cart = await Cart.findByIdAndUpdate(idCart, updateCart); //actualizamos el carrito
 };
 
-//=========DELETE CART=========
+//=========DELETE CART=========//
 cartsCtrl.deleteCart = async (req, res) => {
   //funcion para borrar carrito
   const idCart = req.params.idCart; //capturamos el id del carrito que queremos borrar
