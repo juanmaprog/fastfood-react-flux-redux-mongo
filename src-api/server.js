@@ -3,6 +3,8 @@
 //======IMPORTACIONES======//
 const CartRouter = require('./routes/cart.routes');
 const ProductRouter = require('./routes/product.routes');
+const IngredientRouter = require('./routes/ingredients.routes');
+
 const express = require("express");//requerimos la libreria express
 const exphbs = require("express-handlebars");
 const path = require("path");//Libreria de caminos internas del equipo de trabajo (Juan, Oscar, Josemi)
@@ -67,6 +69,9 @@ app.use('/cart', CartRouter);//ruta para la funcionalidad logica de un carrito
 app.use('/products', ProductRouter);
 app.use('/product', ProductRouter);
 
+  //ingredients routes
+app.use('/ingredients', IngredientRouter);
+app.use('/ingredient', IngredientRouter);
 
 
 

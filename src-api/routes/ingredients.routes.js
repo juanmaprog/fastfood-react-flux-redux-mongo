@@ -1,7 +1,21 @@
-import { router } from 'express';
-const ingredientscontrollers = require('../controllers/ingredients/ingredients.controllers');
+//import { router } from 'express';
+const ingredientcontrollers = require('../controllers/ingredients.controllers');
 const router = require('express').Router();
 
-router.get('/', ingredientscontrollers.allIngred);
 
-export default router;
+//ENDPOINTS DE LA LOGICA DE EL PRODUCTO.
+
+//========== GET ALL INGREDIENTS ==========
+router.get('/', ingredientcontrollers.allIngredients);
+
+//======POST======//
+router.post('/newIngredient', ingredientcontrollers.createdIngredient);
+
+//======UPDATE======//
+router.put('/updateIngredient/:idIngredient', ingredientcontrollers.updateIngredient);
+
+//======DELETE======//
+router.delete('/deleteIngredient/:idIngredient', ingredientcontrollers.deleteIngredient);
+
+//EXPORTS
+module.exports = router;
