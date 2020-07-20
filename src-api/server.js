@@ -1,5 +1,10 @@
 //======IMPORTACIONES======//
-const express = require("express"); //requerimos la libreria express
+const CartRouter = require('./routes/cart.routes');
+const FamilyRouter = require('./routes/family.routes');
+const ProductRouter = require('./routes/product.routes');
+const IngredientRouter = require('./routes/ingredients.routes');
+
+const express = require("express");//requerimos la libreria express
 const exphbs = require("express-handlebars");
 const path = require("path"); //Libreria de caminos internas del equipo de trabajo (Juan, Oscar, Josemi)
 const methodOverride = require("method-override"); //
@@ -63,9 +68,13 @@ app.use((req, res, next) => {
 app.use("/carts", CartRouter); //ruta para las funcionalidades logicas de varios carritos
 app.use("/cart", CartRouter); //ruta para la funcionalidad logica de un carrito
 
-//PRODUCT ROUTES
-app.use("/products", ProductRouter);
-app.use("/product", ProductRouter);
+//======FAMILY======//
+app.use('/families', FamilyRouter);
+app.use('/family', FamilyRouter);
+
+  //ingredients routes
+app.use('/ingredients', IngredientRouter);
+app.use('/ingredient', IngredientRouter);
 
 //DOCUMENTS ROUTES
 app.use("/api/documents", DocumentRouter);

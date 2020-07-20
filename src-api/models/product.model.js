@@ -11,8 +11,13 @@ const ProductSchema = new Schema({
   cost: { type: Number }, //coste del producto para la empresa
   minimumStock: { type: Number }, //stock minimo que podemos tener para seguir funcionando correctamente
   createdAt: { type: Date, default: new Date() }, //nos trae la fecha del momento del registro.
+<<<<<<< HEAD
+  actived: {type: Boolean, default: true},
+  deleted: {type:Boolean, default: false},
+=======
   actived: { type: Boolean, default: true },
   deleted: { type: Boolean, default: false }, //buena practica poner falso aunque los booleanos por defecto siempre son falsos
+>>>>>>> 75141d53d41a3d10bba9172f1c337dbe4b1abb90
 });
 
 module.exports = model("Product", ProductSchema); //exportamos el modelo de carrito
