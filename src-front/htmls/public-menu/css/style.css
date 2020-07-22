@@ -1,0 +1,122 @@
+.main {
+    /* border: 1px solid red; */
+}
+
+.container {
+    display: flex;
+    padding: 2em;
+    justify-content: space-around;
+}
+
+.left {
+    width: 40%;
+    
+}
+
+.left img {
+    width: 500px;
+}
+
+.left .titulo_menu {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 400;
+    font-style: normal;
+    color: #683f2c;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.left .subtitulo_menu {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: gray;
+    padding: 0 1em;
+}
+
+.left button {
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    background-color: #f07800;
+    color: #fff;
+    border-radius: 1.875rem;
+    margin: .5em 0;
+    padding: .5em;
+    text-transform: uppercase;
+    border-color: #f07800;
+}
+
+.left button:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #f07800;
+    transition: .7s all ease;
+}
+
+.left .titulo_menu .right {
+    width: 40%;
+}
+
+.right {
+    width: 40%;
+    /* align-items: center; */
+    /* display: flex;
+    flex-direction: row; */
+    text-align: center;
+}
+
+.right .social_info {
+    /* width: 100%; */
+    /* padding: 3em;
+    margin: 2em; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.right .social_info .social {
+    padding: 1em;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: gray;
+    font-family: 'Oswald', sans-serif;
+}
+
+.right .social_info .social img {
+    width: 60px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.right .botones {
+    
+    margin-top: 1em;
+} 
+
+.right .botones button {
+    padding: .5em;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Oswald', sans-serif;
+    background-color: #fff;
+    color: #f07800;
+    border: 1px solid #f07800;
+    border-radius: 1.875rem;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 .5em;
+}
+
+.right .botones button:hover{
+    cursor: pointer;
+    background-color: #f07800;
+    color: #fff;
+    transition: .7s all ease;
+}
