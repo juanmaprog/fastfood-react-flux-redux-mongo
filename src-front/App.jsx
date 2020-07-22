@@ -1,14 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from "./components/header.jsx";
-import './components/header.css';
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Register from "./components/register.jsx";
 
 function App() {
   return (
-    <div className="App">
-        <Header></Header>
+    <div>
+      <Router>
+
+        <Switch>
+          <Route path="/register" exact component={Register}></Route>
+        </Switch>
+        
+      </Router>
     </div>
   );
 }
