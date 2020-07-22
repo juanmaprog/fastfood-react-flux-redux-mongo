@@ -1,0 +1,14 @@
+body {
+    margin: 100px;
+    padding: 30;
+    background-color: rgb(131, 200, 218);
+    font-family: 'Oswald', sans-serif;
+}
+
+.argument {
+ padding: 0;
+}
+
+.formulario {
+    justify-content: flex-end;
+}
