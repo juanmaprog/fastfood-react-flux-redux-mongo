@@ -1,11 +1,11 @@
 const { Schema, model } = require("mongoose");
 
 const Document = new Schema({
-  _id: String,
+  // _id: String,
   createdAt: { type: Date, default: new Date() },
   user: { type: Schema.Types.ObjectId, ref: "User" },
   paymentMethod: { type: String },
-  DocumentDetails: [{ type: Schema.Types.ObjectId, ref: "DocumentDetails" }],
+  documentDetails: [{ type: Schema.Types.ObjectId, ref: "DocumentDetails" }],
   addresses: [{ type: String }],
   phones: [{ type: String }],
   typeDocument: { type: String },
