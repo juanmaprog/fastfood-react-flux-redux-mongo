@@ -3,35 +3,40 @@ const getNewGUID = require("../helpers/helperString");
 const Document = require("../models/document.model");
 const DocumentDetails = require("../models/documentdetail.model");
 
-const { json } = require("body-parser");
 const documentdetailModel = require("../models/documentdetail.model");
 
 const docCtrl = {};
 
 //======GET======//
 docCtrl.allDocuments = async (req, res) => {
-  const entities = await Document.find().populate("DocumentDetails");
+  const entities = await Document.find().populate("documentDetails");
   res.json(entities);
 };
 
-//============POST=============//
 docCtrl.createDocument = async (req, res) => {
-  //Get all body content.
-  const body = req.body;
-  //Get only details from body.
-  const details = req.body.documentDetails;
-  //remove details from body.
-  delete body["documentDetails"];
-  //Create new document from body result.
-  const idDocument = "xxxxxxxx-zzzz-zzzz-zzzz-zzzzzzzzzzzz"; // getNewGUID();
-  const document = new Document(body);
-  document._id = idDocument;
+  try {
+    //Get all body content.
+    const body = req.body;
+    //Get only details from body.
+    const details = req.body.documentDetails;
+    //remove details from body.
+    delete body["documentDetails"];
 
-  const det = new DocumentDetails(details[0]);
-  det._id = getNewGUID();
-  det.document = document;
+    const cab = new Document(body);
 
-  res.json(document);
+    for (let i = 0; i < details.length; i++) {
+      let det = new DocumentDetails(details[i]);
+      det.document = cab;
+      cab.documentDetails.push(det._id);
+      await det.save();
+    }
+
+    await cab.save();
+
+    res.json(cab);
+  } catch (error) {
+    res.json(error);
+  }
 };
 
 //============PUT=============//
