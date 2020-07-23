@@ -1,0 +1,48 @@
+body {
+    font-weight: bold;
+} 
+
+img {
+    width: 105px;
+    background: url(image/logo.jpg) no-repeat;
+    position: fixed;
+    top: 13px;
+    left: 90px;
+}
+
+#menu{
+    /* background-color: #804000; */
+    background-color: red;
+    margin-top: 40px;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 100;
+    padding: 100;
+    margin-left: 160px;
+}
+
+#menu ul li {
+    display: inline-block;
+}
+
+#menu ul li a {
+    font-family:'Oswald', sans-serif;
+    font-size: large;
+    color: white;
+    display: block;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+}
+
+#menu ul li a:hover {
+    border-bottom: 4px solid white;
+    transition: .5s all ease;
+}
+
+.item {
+    float: right;
+    background: rgb(102, 153, 0);
+}
