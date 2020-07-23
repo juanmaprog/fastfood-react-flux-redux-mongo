@@ -10,7 +10,7 @@ class App extends React.Component{
     }
 
     abrirModal=()=>{
-        this.setState({abiert: |this.state.abierto});
+        this.setState({abiert:  this.state.abierto});
     }
 
 

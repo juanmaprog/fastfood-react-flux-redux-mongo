@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Login from './Login/Login';
+import Register from './Register/Register';
+
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <Login></Login>
+        <Register></Register>
         <a
           className="App-link"
           href="https://reactjs.org"
