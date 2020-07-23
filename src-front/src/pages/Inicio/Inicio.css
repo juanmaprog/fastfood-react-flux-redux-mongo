@@ -1,0 +1,12 @@
+html{
+  margin:0px;
+}
+
+body {
+  font-weight: bold;
+  margin:0px;
+  backgroundImage: `url(${Background})`
+} 
+
+
+

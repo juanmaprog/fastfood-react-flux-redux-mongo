@@ -1,7 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Login from './Login/Login';
+import React, { useState } from "react";
+import "./App.css";
+// import Auth from "./pages/Auth";
+// import Login from "./pages/Login/Login.jsx";
+// import CeateAccount from "./pages/CeateAccount/CreateAccount.jsx";
+import NavBar from "./pages/NavBar/NavBar.jsx";
+import Inicio from "./pages/Inicio/Inicio.jsx";
 
 
 function App() {
@@ -13,27 +16,14 @@ function App() {
     setIsLoading(false);
   }
 
-  return !user ? <Auth /> : <UserLogged />;
+  return !user ? <UserLogged /> : <UserLogged />;
 }
 
 function UserLogged() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Login></Login>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <NavBar/>
+      <Inicio/>
     </div>
   );
 }

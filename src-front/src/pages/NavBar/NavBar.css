@@ -1,0 +1,56 @@
+
+html{
+  margin:0px;
+}
+
+body {
+  font-weight: bold;
+  margin:0px;
+} 
+
+img {
+  width: 90px;
+  position: fixed;
+  top: 18px;
+  left: 90px;
+}
+
+#menu{  
+  background-color: #e0241a;
+  margin-top: 40px;
+  /* height:29px; */
+  background-size: 50% 150%;
+  min-height: 2.5rem;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 100;
+  padding: 100;
+  margin-left: 160px;
+}
+
+
+#menu ul li {
+  display: inline-block;
+}
+
+#menu ul li a {
+  font-family:'Oswald', sans-serif;
+  font-size: large;
+  color: white;
+  display: block;
+  padding: 13px 25px;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+
+#menu ul li a:hover {
+  border-bottom: 4px solid white;
+  transition: .5s all ease;
+}
+
+.item {
+  float: right;
+  background: rgb(102, 153, 0);
+}
