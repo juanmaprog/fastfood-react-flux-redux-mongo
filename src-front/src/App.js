@@ -5,7 +5,6 @@ import "./App.css";
 // import CeateAccount from "./pages/CeateAccount/CreateAccount.jsx";
 import NavBar from "./pages/NavBar/NavBar.jsx";
 import Inicio from "./pages/Inicio/Inicio.jsx";
-import Register from './Register/Register.jsx';
 
 
 function App() {
@@ -25,7 +24,6 @@ function UserLogged() {
     <div >
       <NavBar/>
       <Inicio/>
-      <Register/>
     </div>
   );
 }
