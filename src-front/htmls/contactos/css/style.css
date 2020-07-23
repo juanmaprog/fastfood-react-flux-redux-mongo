@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 00;
+    background-color: rgb(131, 200, 218);
+    font-family: 'Oswald', sans-serif;
+}
+
+.argument {
+    color: rgb(102, 51, 0);
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.formulario {
+    width: 500px;
+    padding: 30px;
+    margin: auto;
+    color: rgb(102, 51, 0);
+}
+
+.formulario h2 {
+    margin-left: 400px;
+}
+
+.form {
+    width: 90%;
+    padding: 8px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 283px;
+}
+
+.formulario p {
+    margin-left: 283px;
+}
+
+.formulario .boton {
+    width: 25%;
+    padding: 12px;
+    border-radius: 50px;
+    margin-left: 627px;
+}
+
+.img {
+    display: flex;
+    align-items: flex-end;
+}
