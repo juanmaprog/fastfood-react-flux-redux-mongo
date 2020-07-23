@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Auth from "./pages/Auth";
-import Login2 from "./pages/Login2";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Login from './Login/Login';
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -18,17 +18,22 @@ function App() {
 
 function UserLogged() {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        height: "100vh",
-      }}
-    >
-      <h1>Usuario Logeado</h1>
-      <button>Cerrar Sesión</button>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <Login></Login>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
