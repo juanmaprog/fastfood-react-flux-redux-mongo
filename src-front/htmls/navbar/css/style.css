@@ -1,26 +1,25 @@
 body {
-    font-weight: bold;
-} 
+    background-image: url(../img/port1.jpg);
+}
 
-img {
+.logo {
     width: 105px;
-    background: url(image/logo.jpg) no-repeat;
-    position: fixed;
-    top: 13px;
-    left: 90px;
+    top: 23px;
+    left: 40px;
+    position: absolute;
 }
-
-#menu{
-    /* background-color: #804000; */
+#menu {
+    margin-top: 50px;
     background-color: red;
-    margin-top: 40px;
 }
 
+#left {
+    margin-left: 160px;
+}
 #menu ul {
     list-style: none;
-    margin: 100;
-    padding: 100;
-    margin-left: 160px;
+    margin: 0;
+    padding: 0;
 }
 
 #menu ul li {
@@ -28,21 +27,19 @@ img {
 }
 
 #menu ul li a {
-    font-family:'Oswald', sans-serif;
-    font-size: large;
+    font-family: sans-serif;
     color: white;
     display: block;
-    padding: 13px 25px;
+    padding: 13px 10px;
     text-decoration: none;
-    border-bottom: 4px solid transparent;
+    border-bottom: 3px solid transparent;
 }
 
 #menu ul li a:hover {
-    border-bottom: 4px solid white;
     transition: .5s all ease;
+    border-bottom: 3px solid #fff;
 }
 
 .item {
     float: right;
-    background: rgb(102, 153, 0);
 }
