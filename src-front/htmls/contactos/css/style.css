@@ -1,49 +1,92 @@
-body {
-    margin: 0;
-    padding: 00;
-    background-color: rgb(131, 200, 218);
-    font-family: 'Oswald', sans-serif;
-}
-
-.argument {
-    color: rgb(102, 51, 0);
-    margin-top: 30px;
-    margin-left: 100px;
-}
-
-.formulario {
-    width: 500px;
-    padding: 30px;
-    margin: auto;
-    color: rgb(102, 51, 0);
-}
-
-.formulario h2 {
-    margin-left: 400px;
-}
-
-.form {
-    width: 90%;
-    padding: 8px;
-    border-radius: 2px;
-    margin-bottom: 5px;
-    border: 1px solid white;
-    font-family: 'Oswald', sans-serif;
-    margin-left: 283px;
-}
-
-.formulario p {
-    margin-left: 283px;
-}
-
-.formulario .boton {
-    width: 25%;
-    padding: 12px;
-    border-radius: 50px;
-    margin-left: 627px;
-}
-
-.img {
+.main {
+    
     display: flex;
-    align-items: flex-end;
+    justify-content: space-evenly;
+    background-color: #95C1E9;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left {
+    
+    width: 44%;
+    text-align: center;
+}
+
+.left .title {
+    color: #683F2C;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.left .subtitle {
+    color: #683F2C;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 8em;
+}
+
+.left .image img {
+    width: 630px;
+}
+
+.right {
+    text-align: center;
+    width: 44%;
+}
+
+.right .title2 {
+    color: #683F2C;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.right .formulario .nomb_form {
+    text-align: left;
+    width: 90%;
+    color: #683F2C;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    margin: 1em auto;
+}
+
+.right .formulario .form {
+    border: none;
+    width: 90%;
+    padding: .8em 0;
+    outline: 0;
+    border-bottom: .0625rem solid rgba(216,216,216,.7);
+    box-shadow: inset 0 0.0625rem 0.1875rem 0 rgba(0,0,0,.5);
+
+}
+
+.right .formulario .button{
+    width: 90%;
+    margin: 3em auto;
+    text-align: right;
+}
+
+.right .formulario .boton {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .9em;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    background: #fff;
+    border-color: #683f2c;
+    color: #683f2c;
+    padding: 1em;
+    width: 175px;
+    border-radius: 2em;
+}
+
+.right .formulario .boton:hover {
+    cursor: pointer;
+    border-color: #683f2c;
+    color: #fff;
+    background: #683f2c;
+    transition: .4s all ease;
 }
