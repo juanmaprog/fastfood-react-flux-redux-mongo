@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./App.css";
+import React, { Component } from "react";
+// import "./App.css";
 // import Auth from "./pages/Auth";
 // import Login from "./pages/Login/Login.jsx";
 //import CeateAccount from "./pages/CeateAccount/CreateAccount.jsx";
@@ -7,28 +7,28 @@ import "./App.css";
 import Inicio from "./pages/Inicio/Inicio.jsx";
 import Menu from "./pages/Menu/Menu.jsx"; */
 import MenuContent from "./components/MenuContent/MenuContent.jsx";
+import ImgPollo from "./assets/imgMenu/imagen1.png";
 
-
-function App() {
- /*  const [user, setUser] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  if (isLoading) {
-    setUser(false);
-    setIsLoading(false);
-  }
-
-  return !user ? <UserLogged /> : <UserLogged />; */
-  return (
-    <div >
-      <MenuContent/>
-      
-    </div>
-  );
-}
-
-function UserLogged() {
+class App extends Component {
   
+
+  render() {
+    return (
+      <div>
+        <MenuContent description="Hamburguesa de Pollo" image = {ImgPollo}/>
+        <MenuContent description="Hamburguesa a la Parrilla" />
+        <MenuContent description="Bebidas" />
+        <MenuContent description="Postres" />
+        <MenuContent description="Snacks" />
+        <MenuContent description="Happy meel" />
+        <MenuContent description="Happy meel" />
+        <MenuContent description="Happy meel" />
+        <MenuContent description="Happy meel" />
+        <MenuContent description="Happy meel" />
+        <MenuContent description="Happy meel" />
+      </div>
+    );
+  }
 }
 
 export default App;
