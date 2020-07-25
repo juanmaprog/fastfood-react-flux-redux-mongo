@@ -6,10 +6,11 @@ import './MenuContent.css';
 
 
 class MenuContent extends Component {
-    constructor(props)  {
-        props.name = "novedades"
-    }
-
+    constructor(props) {
+        super(props);
+        // No hagas esto!
+        this.state = { color: props.color };
+       }
 
     render() {
         return (
