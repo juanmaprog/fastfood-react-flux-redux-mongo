@@ -15,6 +15,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div class="titulo">
+            <h1 class="titulo_carta">Hola, ¿qué quieres comer hoy? </h1>
+        </div> 
         <MenuContent description="Hamburguesa de Pollo" image = {ImgPollo}/>
         <MenuContent description="Hamburguesa a la Parrilla" />
         <MenuContent description="Bebidas" />
