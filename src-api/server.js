@@ -2,9 +2,10 @@
 const FamilyRouter = require('./routes/family.routes');
 const IngredientRouter = require('./routes/ingredients.routes');
 
-const express = require("express");//requerimos la libreria express
+const express = require("express");
+var cors = require('cors');
 const exphbs = require("express-handlebars");
-const path = require("path"); //Libreria de caminos internas del equipo de trabajo (Juan, Oscar, Josemi)
+const path = require("path"); 
 const methodOverride = require("method-override"); //
 const session = require("express-session"); //
 const flash = require("connect-flash");
@@ -12,6 +13,7 @@ const passport = require("passport");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 
+const UserRouter = require("./routes/user.routes");
 const CartRouter = require("./routes/cart.routes");
 const ProductRouter = require("./routes/product.routes");
 const DocumentRouter = require("./routes/document.routes");
@@ -60,11 +62,18 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(cors());
+
 //=======ROUTES======//
 
-//CART ROUTES
-app.use("/carts", CartRouter); //ruta para las funcionalidades logicas de varios carritos
-app.use("/cart", CartRouter); //ruta para la funcionalidad logica de un carrito
+//USER
+app.use("/api/users", UserRouter );
+app.use("/api/user", UserRouter );
+
+
+//CART
+app.use("/carts", CartRouter); 
+app.use("/cart", CartRouter); 
 
 //======FAMILY======//
 app.use('/families', FamilyRouter);
@@ -74,7 +83,7 @@ app.use('/family', FamilyRouter);
 app.use('/ingredients', IngredientRouter);
 app.use('/ingredient', IngredientRouter);
 
-//DOCUMENTS ROUTES
+//DOCUMENTS
 app.use("/api/documents", DocumentRouter);
 app.use("/api/document", DocumentRouter);
 

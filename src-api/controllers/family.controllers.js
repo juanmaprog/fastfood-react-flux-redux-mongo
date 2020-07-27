@@ -1,4 +1,4 @@
-const getNewGUID = require("../helpers/helperString");
+// const getNewGUID = require("../helpers/helperString");
 const familyCtrl = {};
 const Family = require("../models/family.model");
 
@@ -18,7 +18,7 @@ familyCtrl.getFamily = async (req, res) => {
 //======POST======//
 familyCtrl.postFamily = async (req, res) => {
   const family = new Family(req.body);
-  family._id = getNewGUID();
+  // family._id = getNewGUID();
   await family.save();
   res.json(family);
 };

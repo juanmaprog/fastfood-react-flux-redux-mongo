@@ -1,4 +1,4 @@
-const getNewGUID = require("../helpers/helperString");
+// const getNewGUID = require("../helpers/helperString");
 
 const Document = require("../models/document.model");
 const DocumentDetails = require("../models/documentdetail.model");
