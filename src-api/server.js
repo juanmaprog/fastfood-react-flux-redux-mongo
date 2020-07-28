@@ -21,25 +21,11 @@ const DocumentRouter = require("./routes/document.routes");
 //======INICIALIZADORES======//
 const app = express();
 require("./config/passport");
-// Initialize sample data
-// require("./initialData/appServerInit");
-// settings
+
 app.set("port", process.env.PORT || 3003);
-/* app.set("views", path.join(__dirname, "views"));
-app.engine(
-  ".hbs",
-  exphbs({
-    defaultLayout: "main",
-    layoutsDir: path.join(app.get("views"), "layouts"),
-    partialsDir: path.join(app.get("views"), "partials"),
-    extname: ".hbs",
-  })
-);
-app.set("view engine", ".hbs"); */
+
 // middlewares
 app.use(express.urlencoded({ extended: false }));
-// app.use(bodyParser.urlencoded({urlencoded:false}));
-// app.use(bodyParser.json());
 app.use(methodOverride("_method"));
 app.use(
   session({
