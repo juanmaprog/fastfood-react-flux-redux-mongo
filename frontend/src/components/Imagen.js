@@ -13,12 +13,14 @@ import "./Imagen.css";
 //     }
 // }
 
-const styleTitle = { width: "60rem" };
+const styleTitle = { width: "30rem" };
 
 const Imagen = (props) => {
   console.log(props);
   const img = props.imagen;
   const des = props.description;
+  const link = props.link;
+  const col = props.color;
 
   return (
     <div class="card" style={styleTitle}>
@@ -27,7 +29,7 @@ const Imagen = (props) => {
           <img className="card-img-top" src={img} />
         </div>
         <div>
-          <p className="p-10"> {des} </p>
+          <p className="text-center font-weight-bold"> {des} </p>
         </div>
       </div>
     </div>

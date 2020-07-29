@@ -1,0 +1,141 @@
+.titulo .titulo_carta {
+    font-family: 'Oswald', sans-serif; 
+    font-size: 5em;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    margin: .5em 0;    
+    color: #683f2c;
+    text-transform: uppercase;
+}
+
+.galeria_carta {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 60px;
+}
+
+.galeria_carta a {
+    text-decoration: none;
+    width: 100px;
+    margin: 0ps 5px;
+}
+
+.img_gal {
+    box-shadow: 0 0.375rem 1.0625rem 0 rgba(0,0,0,.1);
+    background-color: #fff;
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+#ham_uno {
+    background-image: url(../../img/imagen1.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_dos {
+    background-image: url(../../img/imagen2.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_tres {
+    background-image: url(../../img/imagen3.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_cuatro {
+    background-image: url(../../img/imagen4.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_cinco {
+    background-image: url(../../img/imagen5.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_seis {
+    background-image: url(../../img/imagen6.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_siete {
+    background-image: url(../../img/imagen7.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_ocho {
+    background-image: url(../../img/imagen8.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_nueve {
+    background-image: url(../../img/imagen9.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_diez {
+    background-image: url(../../img/imagen10.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#ham_once {
+    background-image: url(../../img/imagen11.png);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.galeria_carta img {
+    transition:all .5s ease;
+    width: 150px;
+}
+
+.galeria_carta img:hover {
+    transform:scale(1.10);
+}
+
+.galeria_carta h4 {
+    text-transform: uppercase;
+   font-size: small;
+   font-weight: bold;
+   font-family: 'Oswald', sans-serif;
+}
