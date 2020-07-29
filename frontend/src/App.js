@@ -12,7 +12,7 @@ import Carta from "./components/Carta/Carta";
 import PublicMenu from "./components/PublicMenu/PublicMenu.js";
 import PublicMenu2 from "./components/PublicMenu2/PublicMenu2.js";
 /* import PublicMenu3 from "./components/PublicMenu3/PublicMenu3.js"; */
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import SingIn from "./components/SignIn";
 import SingUp from "./components/SingUp";
 

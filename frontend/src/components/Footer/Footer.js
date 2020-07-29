@@ -5,23 +5,6 @@ export default class Footer extends Component {
   render() {
     return (
       <footer class="foot">
-        <div class="others">
-          <div class="title_other">
-            <p class="subtitle_other">preguntas frecuentes</p>
-          </div>
-          <div class="title_other">
-            <p class="subtitle_other">opiniones y sugerencias</p>
-          </div>
-          <div class="title_other">
-            <p class="subtitle_other">información legal</p>
-          </div>
-          <div class="title_other">
-            <p class="subtitle_other">políticas de privacidad</p>
-          </div>
-          <div class="title_other end">
-            <p class="subtitle_other">configuración cookies</p>
-          </div>
-        </div>
         <div class="sub_footer">
           <div class="text_subfooter">
             <p>
