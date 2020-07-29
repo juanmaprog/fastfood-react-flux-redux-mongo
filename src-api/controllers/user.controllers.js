@@ -15,6 +15,7 @@ usersCtrl.allUsersActives = async (req, res) => {
     .where({ active: true })
     .sort({ firstName: "asc" });
   res.json(users);
+  res.send('He iniciado');
 };
 
 usersCtrl.allUsersInactives = async (req, res) => {

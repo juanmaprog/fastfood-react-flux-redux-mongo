@@ -19,7 +19,7 @@ function App() {
     <Router>
       <Navigation />
 
-      <Route path="/" exact component={Home} />
+      <Route path="/" exact component={Home}  />
       <Route path="/carta" component={Carta} />
       <Route path="/singup" component={SingUp} />
       <Route path="/singin" component={SingIn} />
