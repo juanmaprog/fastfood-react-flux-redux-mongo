@@ -23,7 +23,7 @@ function App() {
     <div>
     <Router>
     <Navigation />
-    <Switch>
+
       <Route path="/" exact component={Home} />
       <Route path="/carta" component={Carta} />
       <Route path="/singup" component={SingUp} />
@@ -40,7 +40,7 @@ function App() {
       <Route path="/publicmenu10" component={PublicMenu10} />
       <Route path="/publicmenu11" component={PublicMenu11} /> */}
 
-    </Switch>
+
     </Router>
     <Footer />
     </div>
