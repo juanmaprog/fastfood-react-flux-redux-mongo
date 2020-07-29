@@ -22,9 +22,15 @@ function App() {
     
     <div>
     <Router>
+<<<<<<< HEAD
     <Navigation />
     <Switch>
       <Route path="/" exact component={Home} />
+=======
+      <Navigation />
+
+      <Route path="/" exact component={Home}  />
+>>>>>>> 5c1a633eb20789d1473b0fc924dd3d8cef5212b8
       <Route path="/carta" component={Carta} />
       <Route path="/singup" component={SingUp} />
       <Route path="/singin" component={SingIn} />
