@@ -9,6 +9,7 @@ import Navigation from "./components/Navigation.js";
 // import CreateUser from "./components/CreateUser";
 import Footer from "./components/Footer/Footer";
 import Carta from "./components/Carta/Carta";
+/* import Ofertas from "./components/Ofertas/Ofertas"; */
 import PublicMenu from "./components/PublicMenu/PublicMenu.js";
 import PublicMenu2 from "./components/PublicMenu2/PublicMenu2.js";
 /* import PublicMenu3 from "./components/PublicMenu3/PublicMenu3.js"; */
@@ -26,6 +27,7 @@ function App() {
 
       <Route path="/" exact component={Home} />
       <Route path="/carta" component={Carta} />
+      {/* <Route path="/ofertas" component={Ofertas} /> */}
       <Route path="/singup" component={SingUp} />
       <Route path="/singin" component={SingIn} />
       <Route path="/publicmenu" component={PublicMenu} />

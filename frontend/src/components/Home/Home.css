@@ -7,18 +7,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 1em;
+  padding: 5.5em;
+
 }
 
 
 .titulo_home {
-  border: 1px solid #683f2c;
+  border: 1px solid #007BFF;
   text-align: center;
   width: 40%;
   margin: 0em auto;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  color: #683f2c;
+  color: #007BFF;
   background-color: #f8f8f880;
   padding: 1em;
 }
@@ -32,20 +33,24 @@ body {
 }
 
 .left {
-  border: 1px solid #683f2c;
+  border: 1px solid #007BFF;
   text-align: center;
   width: 40%;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  color: #683f2c;
+  color: #007BFF;
   height: 150px;
   padding: 1em;
   text-decoration: none;
   background-color: #f8f8f880;
 }
 
+.subtitulo {
+  
+}
+
 .left:hover {
-  background-color:#683f2c;
+  background-color:#007BFF;
   cursor: pointer;
   transition: .4s all ease;
   color: #f9f1f1;
@@ -53,12 +58,12 @@ body {
 }
 
 .right {
-  border: 1px solid #683f2c;
+  border: 1px solid #007BFF;
   text-align: center;
   width: 40%;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  color: #683f2c;
+  color: #007BFF;
   height: 150px;
   padding: 1em;
   text-decoration: none;
@@ -66,7 +71,7 @@ body {
 }
 
 .right:hover {
-  background-color:#683f2c;
+  background-color:#007BFF;
   cursor: pointer;
   transition: .4s all ease;
   color: #f9f1f1;

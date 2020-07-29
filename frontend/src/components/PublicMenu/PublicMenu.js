@@ -9,13 +9,13 @@ export default class PublicMenu extends Component {
         return (
             <div class="main">
                 <div class="container">
-                    <div class="left">
+                    <div class="left_is">
                         <div id="img_left1"></div>
                         <h2 class="titulo_menu">MENÚ DUO CHEDDAR BACON</h2>
                         <p class="subtitulo_menu">Es una realidad, la mejor combinación ha llegado. Con nuestra jugosa carne a la parrilla, doble de queso cheddar y doble de bacon. Acompañada de tomate fresco, salsa cheddar y cebolla crujiente, ¡hasta el pan lleva bacon! Es el gocheo hecho hamburguesa.</p>
                         <button>iniciar pedido</button>
                     </div>
-                    <div class="right">
+                    <div class="right_is">
                         <div class="social_info">
                             <div class="left_info">
                                 <div class="social">
