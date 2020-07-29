@@ -22,9 +22,9 @@ function App() {
     
     <div>
     <Router>
-      <Navigation />
+    <Navigation />
 
-      <Route path="/" exact component={Home}  />
+      <Route path="/" exact component={Home} />
       <Route path="/carta" component={Carta} />
       <Route path="/singup" component={SingUp} />
       <Route path="/singin" component={SingIn} />
@@ -40,7 +40,7 @@ function App() {
       <Route path="/publicmenu10" component={PublicMenu10} />
       <Route path="/publicmenu11" component={PublicMenu11} /> */}
 
-    </Switch>
+
     </Router>
     <Footer />
     </div>
