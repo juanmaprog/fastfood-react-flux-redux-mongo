@@ -1,54 +1,64 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-const navbar = {backgroundColor: '#F16E10'};
+const navbar = { backgroundColor: "#F16E10" };
 
 export default class Navigation extends Component {
+  componentDidMount() {
+    console.log("hola");
+  }
+
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark " style={navbar}>
-        <div className="container">
-          <Link className="navbar-brand" to="/">
-            Fast Food
-          </Link>
+      <nav className="navbar navbar-dark navbar-expand-md fixed-top bg-primary text-uppercase text-left d-flex">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
+            <strong>Fast food</strong>
+          </a>
           <button
-            className="navbar-toggler"
-            type="button"
             data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/">
+            className="navbar-toggler"
+            data-target="#navcol-1"
+          ></button>
+          <div className="collapse navbar-collapse text-left" id="navcol-1">
+            <ul className="nav navbar-nav mr-auto">
+              <li className="nav-item" role="presentation">
+                <a className="nav-link active" href="/">
                   INICIO
-                </Link>
+                </a>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/carta">
+              <li className="nav-item" role="presentation">
+                <a className="nav-link" href="/carta">
                   CARTA
-                </Link>
+                </a>
               </li>
+              <li className="nav-item" role="presentation">
+                <a className="nav-link" href="/ofertas">
+                  OFERTAS
+                </a>
+              </li>
+              <li className="nav-item" role="presentation"></li>
+              <li className="nav-item" role="presentation"></li>
             </ul>
-            <ul className="navbar-nav ml-auto">
-            <li className="nav-item ">
-                <Link className="nav-link" to="/singup">
-                  CREAR USUARIO
-                </Link>
-              </li>
-              <li className="nav-item ">
-                <Link className="nav-link" to="/singin">
+            <button
+              className="btn btn-success text-center border rounded shadow-sm mx-auto"
+              data-toggle="tooltip"
+              data-bs-tooltip=""
+              data-placement="bottom"
+              type="button"
+              title="7 ARTÍCULOS 12.99 €"
+            >
+              VER MI PEDIDO
+            </button>
+            <ul className="nav navbar-nav ml-auto">
+              <li className="nav-item" role="presentation">
+                <a className="nav-link active" href="/login">
                   INICIAR SESIÓN
-                </Link>
+                </a>
               </li>
-              <li className="nav-item ">
-                <Link className="nav-link" to="/">
-                  CERRAR SESIÓN
-                </Link>
+              <li className="nav-item" role="presentation">
+                <a className="nav-link active" href="/user">
+                  USUARIO
+                </a>
               </li>
             </ul>
           </div>
