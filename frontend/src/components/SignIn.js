@@ -42,6 +42,9 @@ export default class SignIn extends Component {
             
             <button type="submit" className="btn btn-primary">Acceder</button>
 
+            <h1>¿Aún no estas registrado?</h1>
+            <button>Registrase</button>
+
           </form>
         </div>
       );

@@ -51,12 +51,12 @@ export default class Navigation extends Component {
             </button>
             <ul className="nav navbar-nav ml-auto">
               <li className="nav-item" role="presentation">
-                <a className="nav-link active" href="/login">
+                <a className="nav-link active" href="/singin">
                   INICIAR SESIÓN
                 </a>
               </li>
               <li className="nav-item" role="presentation">
-                <a className="nav-link active" href="/user">
+                <a className="nav-link active" href="/singup">
                   USUARIO
                 </a>
               </li>
