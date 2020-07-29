@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 // import axios from "axios";
-import { NavLink } from "react-router-dom";
-
 
 export default class SingUp extends Component {
 
@@ -14,7 +12,6 @@ export default class SingUp extends Component {
       password:"",
     }
   }
-
     handleChange = (e) => {
       this.setState({
         [e.target.id]: e.target.value
@@ -24,35 +21,38 @@ export default class SingUp extends Component {
     handleSubmit = (e) => {
       e.preventDefault();
       console.log(this.state);
+
+      setTimeout(() => {
+        this.props.history.push("/singin");
+      }, 1500);
     }
   
   render() {
     return (
-        <div class="init">
-          <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Te llamas</label>
-              <input type="name" class="form-control" id="exampleInputEmail1"></input>
+        <div className="init">
+          <form onSubmit={this.handleSubmit}>
+
+            <div className="form-group">
+              <label htmlFor="name">Te llamas</label>
+              <input onChange={this.handleChange} type="name" className="form-control" id="name"></input>
             </div>
 
-            <div class="form-group">
-              <label for="exampleInputPassword1">Te apellidas</label>
-              <input type="username" class="form-control" id="exampleInputPassword1"></input>
+            <div className="form-group">
+              <label htmlFor="username">Te apellidas</label>
+              <input onChange={this.handleChange} type="username" className="form-control" id="username"></input>
             </div>
 
-            <div class="form-group">
-              <label for="exampleInputPassword1">Tu correo electrónico es</label>
-              <input type="email" class="form-control" id="exampleInputPassword1"></input>
+            <div className="form-group">
+              <label htmlFor="email">Tu correo electrónico es</label>
+              <input onChange={this.handleChange} type="email" className="form-control" id="email"></input>
             </div>
 
-            <div class="form-group">
-              <label for="exampleInputPassword1">Tu contraseña es</label>
-              <input type="password" class="form-control" id="exampleInputPassword1"></input>
+            <div className="form-group">
+              <label htmlFor="password">Tu contraseña es</label>
+              <input onChange={this.handleChange} type="password" className="form-control" id="password"></input>
             </div>
 
-            {/* <button type="submit" class="btn btn-primary">Acceder</button> */}
-
-            <NavLink to="/" className="button" id="buttonsubmit">Registrase</NavLink>
+            <button type="submit" className="btn btn-primary">Acceder</button>
 
           </form>
         </div>
