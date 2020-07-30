@@ -1,0 +1,8 @@
+.carro {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}

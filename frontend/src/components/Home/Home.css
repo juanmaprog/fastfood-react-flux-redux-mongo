@@ -1,6 +1,4 @@
-body {
-  background-color: #f9f1f1;
-}
+
 
 .principal {
   background-image: url(../../img/fondo.jpg);
@@ -8,18 +6,20 @@ body {
   background-size: cover;
   background-position: center;
   padding: 5.5em;
+  height: 100vh;
+
 
 }
 
 
 .titulo_home {
-  border: 1px solid #007BFF;
+  border: 3px solid #F07800;
   text-align: center;
   width: 40%;
-  margin: 0em auto;
+  margin: 1em auto;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  color: #007BFF;
+  color: #F07800;
   background-color: #f8f8f880;
   padding: 1em;
 }
@@ -33,24 +33,22 @@ body {
 }
 
 .left {
-  border: 1px solid #007BFF;
+  border: 3px solid #F07800;
   text-align: center;
   width: 40%;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  color: #007BFF;
+  color: #F07800;
   height: 150px;
   padding: 1em;
   text-decoration: none;
   background-color: #f8f8f880;
 }
 
-.subtitulo {
-  
-}
+
 
 .left:hover {
-  background-color:#007BFF;
+  background-color:#F07800;
   cursor: pointer;
   transition: .4s all ease;
   color: #f9f1f1;
@@ -58,12 +56,12 @@ body {
 }
 
 .right {
-  border: 1px solid #007BFF;
+  border: 3px solid #F07800;
   text-align: center;
   width: 40%;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  color: #007BFF;
+  color: #F07800;
   height: 150px;
   padding: 1em;
   text-decoration: none;
@@ -71,7 +69,7 @@ body {
 }
 
 .right:hover {
-  background-color:#007BFF;
+  background-color:#F07800;
   cursor: pointer;
   transition: .4s all ease;
   color: #f9f1f1;

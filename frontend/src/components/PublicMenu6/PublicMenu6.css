@@ -12,7 +12,6 @@
     display: flex;
     padding: 3em;
     justify-content: space-evenly;
-    /* border: 3px solid #F07800; */
     margin: 3em 0 1em 0;
     /* border-radius: 50%;  */
 }
@@ -24,9 +23,9 @@
     padding: 2em;
 }
 
-#img_left3 {
+#img_left6 {
     width: 400px;
-    background-image: url(../../img/imagen3.png);
+    background-image: url(https://gps.burgerkingencasa.es/images/products/1576058369410_Big_king_XXL.png);
     background-repeat: no-repeat;
     background-size: contain;
     /* background-position: center; */

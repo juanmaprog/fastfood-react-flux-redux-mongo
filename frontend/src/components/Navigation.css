@@ -1,0 +1,11 @@
+.img_cart {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/cart.jpg);
+    background-size: contain;
+    margin-left: 1em;
+}
+
+.img_cart:hover {
+    cursor: pointer;
+}

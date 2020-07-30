@@ -15,14 +15,14 @@ export default class Home extends Component {
           <NavLink to="/carta" className="left">
               <h2>carta</h2>
               <p className="subtitulo">
-                Hecha un vistazo a nuestras espectaculares hamburguesas y
+                Echa un vistazo a nuestras espectaculares hamburguesas y
                 realiza tu pedido
               </p>
           </NavLink>
           <NavLink to="/ofertas" className="right">
               <h2>ofertas</h2>
               <p className="subtitulo">
-                Hecha un vistazo a nuestras espectaculares hamburguesas y
+                Echa un vistazo a nuestras espectaculares hamburguesas y
                 realiza tu pedido
               </p>
           </NavLink>

@@ -1,12 +1,18 @@
 .titulo .titulo_carta {
     font-family: 'Oswald', sans-serif; 
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
     font-weight: 400;
     font-style: normal;
-    margin: .5em 0;    
-    color: #683f2c;
+    margin: .5em auto;    
+    color: #F07800;
     text-transform: uppercase;
+    padding: 1em;
+    width: 100%;
+}
+
+.main_carta {
+    margin-top: 3em;
 }
 
 .galeria_carta {
@@ -17,6 +23,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 60px;
+    /* background-color: #007BFF; */
 }
 
 .galeria_carta a {

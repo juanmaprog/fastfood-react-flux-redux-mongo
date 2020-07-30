@@ -12,7 +12,6 @@
     display: flex;
     padding: 3em;
     justify-content: space-evenly;
-    /* border: 3px solid #F07800; */
     margin: 3em 0 1em 0;
     /* border-radius: 50%;  */
 }
@@ -24,9 +23,9 @@
     padding: 2em;
 }
 
-#img_left3 {
+#img_left9 {
     width: 400px;
-    background-image: url(../../img/imagen3.png);
+    background-image: url(../../img/imagen9.png);
     background-repeat: no-repeat;
     background-size: contain;
     /* background-position: center; */
