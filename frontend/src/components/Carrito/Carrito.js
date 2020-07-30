@@ -8,7 +8,7 @@ export default class Carrito extends Component{
     constructor(){
         super();
         this.state = {
-            productos : [{id: 1, nombre: "Hamb. ternera", precio: 3.5} ],
+            productos : [{id: 1, nombre: "Hamb. ternera", precio: 3.5}],
         }
     }
     render(){

@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import "./PublicMenu.css";
 
 export default class PublicMenu extends Component {
+
+
+
+
   render() {
     return (
       <div class="main_public">
@@ -14,7 +18,7 @@ export default class PublicMenu extends Component {
             <p class="subtitulo_menu">
             Es una realidad, la mejor combinación ha llegado. Con nuestra jugosa carne a la parrilla, doble de queso cheddar y doble de bacon. Acompañada de tomate fresco, salsa cheddar y cebolla crujiente, ¡hasta el pan lleva bacon! Es el gocheo hecho hamburguesa.
             </p>
-            <button>añadir</button>
+            <button >añadir</button>
           </div>
         </div>
       </div>

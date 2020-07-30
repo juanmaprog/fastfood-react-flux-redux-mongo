@@ -11,6 +11,7 @@ export default class Carta extends Component {
     descripcion: "",
     link: "",
     color: "",
+    
   };
 
   render() {
